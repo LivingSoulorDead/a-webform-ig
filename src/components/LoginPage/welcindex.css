@@ -96,3 +96,63 @@ h2 {
 .body {
   background-image: url("src/assets/Screenshot 2025-09-09 223451.png");
 }
+
+@media (max-width: 920px) {
+  .welcome-container {
+    padding: 0 24px;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .btn,
+  .btn1,
+  .btn2 {
+    width: 100%;
+    max-width: 320px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 680px) {
+  .welcome-container {
+    padding: 0 18px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 28px;
+  }
+
+  .btn,
+  .btn1,
+  .btn2 {
+    width: 100%;
+    max-width: 100%;
+    font-size: 20px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 520px) {
+  .welcome-container {
+    padding: 0 14px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .btn,
+  .btn1,
+  .btn2 {
+    font-size: 18px;
+    padding: 12px;
+    margin-top: 16px;
+  }
+}

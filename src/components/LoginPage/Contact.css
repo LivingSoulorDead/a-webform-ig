@@ -35,3 +35,58 @@
     border-bottom: 2px solid white;
     transform: translateY(200px);
 }
+
+@media (max-width: 1024px) {
+  .contact-title {
+    font-size: 72px;
+    transform: translateY(60px);
+  }
+
+  .contact-content {
+    font-size: 18px;
+    padding: 18px;
+  }
+
+  .contact-footer button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 50px;
+    transform: translateY(40px);
+  }
+
+  .contact-content {
+    font-size: 17px;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .contact-footer button {
+    width: 100%;
+    max-width: 320px;
+    transform: none;
+    padding: 12px 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .contact-title {
+    font-size: 36px;
+    transform: none;
+    margin-bottom: 18px;
+  }
+
+  .contact-content {
+    font-size: 16px;
+    padding: 14px;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .contact-footer button {
+    max-width: 100%;
+  }
+}

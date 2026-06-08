@@ -6,6 +6,8 @@ import LoginPage from "./components/LoginPage";
 import Welcome from "./components/LoginPage/Welcome";
 import Designs from "./components/LoginPage/designs";
 import Courses from "./components/LoginPage/Courses";
+import About from "./components/LoginPage/About";
+import Contact from "./components/LoginPage/Contact";
 
 // Layout for pages that should have the common header
 function Layout() {
@@ -29,6 +31,8 @@ function App() {
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/designs" element={<Designs />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
 
         {/* Redirect unknown routes */}

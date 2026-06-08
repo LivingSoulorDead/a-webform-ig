@@ -1,4 +1,4 @@
-.about-content{
+.contact-content{
     color: rgb(118, 100, 100);
     align-items: center;
     display: flex;
@@ -10,7 +10,7 @@
     transform: translateY(140px);
 }
 
-.about-title{
+.contact-title{
     font-size: 110px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -18,7 +18,7 @@
     color: rgb(118, 100, 100);
 }
 
-.about-footer button {
+.contact-footer button {
     font-size: 16px;
     color: rgb(118, 100, 100);
     transform: translateY(200px);
@@ -29,7 +29,7 @@
     transition: all 0.2s ease;
 }
 
-.about-footer button:hover {
+.contact-footer button:hover {
     background-color: rgb(118, 100, 100);
     color: white;
     border-bottom: 2px solid white;

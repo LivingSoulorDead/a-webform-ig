@@ -1,0 +1,98 @@
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-color: rgb(180, 159, 210);
+  background-image: url("src/assets/360_F_406607245_daS9yMQ9g8MMZz3XWf2LVXxFy5cAdLQ7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  color: black;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  width: 320px;
+  padding: 15px;
+  margin-top: 20px;
+
+  background-color: lightgray;
+  color: black;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 24px;   /* Change this value to increase/decrease text size */
+  font-weight: bold;
+
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn1 {
+  width: 320px;
+  padding: 15px;
+  margin-top: 20px;
+
+  background-color: lightgray;
+  color: black;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 24px;   /* Change this value to increase/decrease text size */
+  font-weight: bold;
+
+  transition: transform 0.2s;
+}
+
+.btn1:hover {
+  transform: scale(1.05);
+}
+
+.btn2 {
+  width: 320px;
+  padding: 15px;
+  margin-top: 20px;
+
+  background-color: lightgray;
+  color: black;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 24px;   /* Change this value to increase/decrease text size */
+  font-weight: bold;
+
+  transition: transform 0.2s;
+}
+
+.btn2:hover {
+  transform: scale(1.05);
+}
+
+.body {
+  background-image: url("src/assets/Screenshot 2025-09-09 223451.png");
+}

@@ -1,0 +1,1462 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 0, 0);
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+#root {
+  background-color: white;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  background-color: white;
+}
+
+.imge1 img {
+  display: flex;
+  height: 100vh;
+  width: 562px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.imge2 img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 100;
+}
+
+.imge1 {
+  display: flex;
+  position: absolute;
+  top: -346.5px;
+  right: -0px;
+}
+
+.imge3 {
+  position: absolute;
+  top: -250%;
+  left: 34%;
+  z-index: 2;
+}
+
+.imge3 img {
+  width: 400px;
+  height: 500px;
+}
+
+.imge2 {
+  position: absolute;
+  top: 140px;
+  right: 435px;
+  z-index: 4;
+}
+
+.imge4 img {
+  width: 730px;
+  height: 450px;
+}
+
+.imge4 {
+  position: absolute;
+  top: -150px;
+  right: -30px;
+  z-index: 3;
+}
+
+.texth {
+  position: absolute;
+  z-index: 5;
+  font-family: 'Arial';
+  font-size: 35px;
+  text-align: left;
+  margin-top: -190px;
+  right: 270px;
+  color: white;
+}
+
+.login {
+  position: absolute;
+  z-index: 6;
+  font-family: "Poppins";
+  font-weight: 100;
+  font-size: 35px;
+  text-align: left;
+  margin-top: -500px;
+  margin-right: -150px;
+  color: black;
+}
+
+.more {
+  position: absolute;
+  z-index: 7;
+  font-family: 'Poppins';
+  font-weight: 20;
+  font-size: 20px;
+  text-align: left;
+  margin-top: -390px;
+  margin-right: -150px;
+  color: black;
+}
+
+.inp {
+  display: flex;
+}
+
+.first {
+  position: absolute;
+  z-index: 8;
+  margin-top: -150px;
+  left: 125px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 300px;
+  color: black;
+}
+
+.first img {
+  display: flex;
+}
+
+.first input {
+  display: flex;
+  background-color: #F0EDFF;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  padding-left: 40px;
+}
+
+.second input {
+  background-color: #F0EDFF;
+  display: flex;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  padding-left: 40px;
+}
+
+.first input.error-input,
+.second input.error-input {
+  border: 2px solid #d32f2f;
+}
+
+.field-error {
+  display: none;
+}
+
+.error-message {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 35px;
+  z-index: 20;
+  font-family: 'Poppins';
+  font-size: 11px;
+  color: #d32f2f;
+  line-height: 1.2;
+  width: 240px;
+  pointer-events: none;
+}
+
+.second {
+  position: absolute;
+  z-index: 9;
+  margin-top: -90px;
+  left: 125px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 300px;
+  border-radius: 6px;
+  color: black;
+  flex-wrap: wrap;
+}
+
+.first img {
+  position: absolute;
+  z-index: 11;
+  left: 20px;
+  margin-top: -10px;
+}
+
+.second img {
+  display: flex;
+  position: absolute;
+  z-index: 11;
+  left: 20px;
+  margin-top: -10px;
+}
+
+.enter button {
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  font-family: "poppins";
+  font-weight: 20;
+  color: white;
+  background: linear-gradient(to right, #9181F4, #5038ED);
+  margin-top: 0px;
+  left: 230px;
+  display: flex;
+  padding: 10px;
+  width: 105px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  position: absolute;
+  z-index: 11;
+  margin-top: 190px;
+  left: 70px;
+  display: flex;
+  padding: 10px;
+  width: 100px;
+  border-bottom: 2px solid #F0EDFF;
+}
+
+.line2 {
+  position: absolute;
+  z-index: 11;
+  margin-top: 190px;
+  left: 370px;
+  display: flex;
+  padding: 10px;
+  width: 100px;
+  border-bottom: 2px solid #F0EDFF;
+}
+
+.with {
+  position: absolute;
+  z-index: 12;
+  font-size: 20px;
+  text-align: left;
+  margin-top: 210px;
+  align-items: left;
+  left: 197px;
+  color: black;
+}
+
+.google {
+  position: absolute;
+  z-index: 8;
+  margin-top: 150px;
+  left: 125px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 300px;
+  color: black;
+  align-items: left;
+  align-content: left;
+}
+
+.google button {
+  border-radius: 20px;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #F0EDFF;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.fb button {
+  border-radius: 20px;
+  display: flex;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #F0EDFF;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  justify-content: center;
+  gap: 5px;
+}
+
+.fb {
+  position: absolute;
+  z-index: 8;
+  margin-top: 220px;
+  left: 125px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 300px;
+  color: black;
+  text-align: left;
+}
+
+.google img {
+  border-radius: 20px;
+}
+
+.divider {
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background-color: #E0E0E0;
+  z-index: 20;
+}
+
+.divider2 {
+  position: absolute;
+  left: 75%;
+  width: 0px;
+  height: 100%;
+  background-color: #E0E0E0;
+  z-index: 20;
+}
+
+.left {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.right {
+  flex: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px; 
+}
+
+
+@media (max-width: 1445px) {
+  .imge1 img {
+    width: 78%;
+    height: 1088%;
+    transform: translate(159px, -88px);
+  }
+  .imge1{
+    width: 100%;
+    height: 100%;
+  }
+  .imge2 img {
+    width: 77.8%;
+    height: 869%;
+    transform: translate(30px, 0px);
+  }
+
+  .imge3 img {
+    width: 350px;
+    height: 450px;
+    transform: translate(20px, 0px);
+  }
+
+  .imge4 img {
+    width: 650px;
+    height: 400px;
+    transform: translate(-10px, 0px);
+  }
+
+  .texth {
+    font-size: 30px;
+    right: 200px;
+    transform: translate(-50px, 0px);
+  }
+
+  .login {
+    font-size: 30px;
+  }
+
+  .first,
+  .second {
+    width: 270px;
+  }
+
+  .enter button {
+    left: 200px;
+    width: 95px;
+  }
+
+  .line {
+    left: 60px;
+  }
+
+  .line2 {
+    left: 320px;
+  }
+
+  .with {
+    left: 160px;
+  }
+
+  .google,
+  .fb {
+    width: 270px;
+    left: 110px;
+  }
+  .divider{
+    height: 0px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .imge1 img {
+    width: 77.8%;
+    height: 869%;
+    transform: translate(155px, 0px);
+  }
+  .imge1{
+    width: 100%;
+    height: 100%;
+  }
+  .imge2 img {
+    width: 77.8%;
+    height: 869%;
+    transform: translate(60px, 0px);
+  }
+
+  .imge3 img {
+    width: 350px;
+    height: 450px;
+    transform: translate(20px, 0px);
+  }
+
+  .imge4 img {
+    width: 650px;
+    height: 400px;
+    transform: translate(-10px, 0px);
+  }
+
+  .texth {
+    font-size: 30px;
+    right: 200px;
+    transform: translate(-50px, 0px);
+  }
+
+  .login {
+    font-size: 30px;
+  }
+
+  .first,
+  .second {
+    width: 270px;
+  }
+
+  .enter button {
+    left: 200px;
+    width: 95px;
+  }
+
+  .line {
+    left: 60px;
+  }
+
+  .line2 {
+    left: 320px;
+  }
+
+  .with {
+    left: 160px;
+  }
+
+  .google,
+  .fb {
+    width: 270px;
+    left: 110px;
+  }
+  .divider{
+    height: 0px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    height: auto;
+    min-height: 100vh;
+    flex-wrap: wrap;
+  }
+
+  .left,
+  .right {
+    flex: 1;
+    width: 100%;
+    min-height: 50vh;
+    padding: 30px 20px;
+  }
+
+  .imge1 img {
+    width: 77.8%;
+    height: 869%;
+    transform: translate(0px, 0px);
+  }
+
+  .imge2 {
+    position: relative;
+    width: 0%;
+    height: 100%;
+  }
+
+  .imge2 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .imge3,
+  .imge4 {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .imge3 img {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+  }
+
+  .imge4 img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+  }
+
+  .texth {
+    position: relative;
+    right: auto;
+    margin-top: 15px;
+    font-size: 24px;
+    text-align: center;
+    color: black;
+  }
+
+  .login {
+    position: relative;
+    margin-top: 0;
+    margin-right: 0;
+    font-size: 28px;
+    transform: translate(-5px, 0px);
+  }
+
+  .more {
+    position: relative;
+    margin-top: 10px;
+    margin-right: 0;
+    font-size: 16px;
+    transform: translate(-8px, 0px);
+  }
+
+  .first {
+    position: relative;
+    left: auto;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .second {
+    position: relative;
+    left: auto;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .enter button {
+    position: relative;
+    left: auto;
+    margin-top: 15px;
+    width: auto;
+    padding: 10px 30px;
+    transform: translate(-6px, 0px);
+  }
+
+  .line,
+  .line2 {
+    position: relative;
+    left: auto;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 100px;
+  }
+
+  .with {
+    position: relative;
+    left: auto;
+    margin-top: 15px;
+    transform: translate(0px, -30px);
+  }
+
+  .google{
+    position: relative;
+    left: auto;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 300px;
+    transform: translate(-200px, -50px);
+  }
+  .fb {
+    position: relative;
+    left: auto;
+    margin-top: 10px;
+    width: 120%;
+    max-width: 120px;
+    transform: translate(200px, -138px);
+  }
+  .fb button{
+    width: 200px;
+  }
+  
+  .divider,
+  .divider2 {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .left,
+  .right {
+    padding: 20px;
+  }
+
+  .login {
+    font-size: 24px;
+    transform: translate(-30px, 0px);
+  }
+
+  .more {
+    font-size: 14px;
+    transform: translate(-25px, 5px);
+  }
+
+  .texth {
+    font-size: 20px;
+  }
+
+  .first input,
+  .second input {
+    font-size: 14px;
+  }
+  .first {
+    transform: translate(90px, -18px);
+  }
+  .second{
+    transform: translate(-134px, 50px);
+  }
+  .second img{
+    transform: translate(-4px, 0px);
+  }
+
+  .enter button {
+    font-size: 14px;
+    transform: translate(-21px, 35px);
+  }
+
+  .with {
+    font-size: 16px;
+    transform: translate(-20px, -55px);
+  }
+
+  .google button {
+    font-size: 12px;
+    transform: translate(180px,-25px);
+  }
+  .fb button {
+    font-size: 12px;
+    transform: translate(-220px, 50px);
+  }
+  .line,
+  .line2 {
+    position: relative;
+    left: auto;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 100px;
+    transform: translate(-21px, 38px);
+  }
+  .line2{
+    transform: translate(-21px, 16px);
+  }
+}
+
+@media (max-width: 480px) {
+
+  body,
+  html {
+    border-radius: 0;
+  }
+
+  .container {
+    border-radius: 0;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .login {
+    font-size: 20px;
+    transform: translate(-23px, 0px);
+  }
+
+  .more {
+    font-size: 13px;
+    transform: translate(-20px, 5px);
+  }
+
+  .first img{
+    transform: translate(0px, 15px);
+  }
+  .second img{
+    transform: translate(10px, 30px);
+  }
+  
+  .first input,
+  .second input {
+    width: 100%;
+    padding: 10px 0 10px 35px;
+    font-size: 13px;
+  }
+
+  .first input {
+    width: 100%;
+    font-size: 13px;
+    transform: translate(4px, 15px);
+  }
+  .second input {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+    transform: translate(15px, 30px);
+    box-sizing: border-box;
+  }
+
+  .enter button {
+    width: 100%;
+    transform: translate(-15px, 50px);
+  }
+
+  .texth {
+    font-size: 18px;
+  }
+
+  .imge3 img,
+  .imge4 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .google,
+  .fb {
+    width: 100%;
+  }
+
+  .google button {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    transform: translate(170px, 0px);
+    box-sizing: border-box; 
+  }
+  .fb button {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    transform: translate(-230px, 90px);
+    box-sizing: border-box;
+  }
+  .google button,
+.fb button {
+  min-width: 280px;
+  width: 280px;
+  flex-shrink: 0;
+}
+}
+
+@media (max-width: 320px) {
+
+  body,
+  html {
+    border-radius: 0;
+  }
+  .google button,
+  .fb button {
+    min-width: 240px;
+    width: 240px;
+  }
+  .google,
+.fb {
+  flex-shrink: 0;
+}
+
+  .container {
+    border-radius: 0;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .login {
+    font-size: 20px;
+    transform: translate(-23px, 0px);
+  }
+
+  .more {
+    font-size: 13px;
+    transform: translate(-20px, 5px);
+  }
+
+  .first img{
+    transform: translate(-30px, 15px);
+  }
+  .second img{
+    transform: translate(33px, 30px);
+  }
+  
+  .first input,
+  .second input {
+    width: 100%;
+    padding: 10px 0 10px 35px;
+    font-size: 13px;
+  }
+
+  .first input {
+    width: 100%;
+    font-size: 13px;
+    transform: translate(-30px, 15px);
+  }
+  .second input {
+    width: 100%;
+    font-size: 13px;
+    transform: translate(35px, 30px);
+  }
+
+  .enter button {
+    width: 100%;
+    transform: translate(-15px, 50px);
+  }
+
+  .texth {
+    font-size: 18px;
+  }
+
+  .imge3 img,
+  .imge4 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .google,
+  .fb {
+    width: 100%;
+  }
+
+  .google button {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    transform: translate(170px, 0px);
+  }
+  .fb button {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    transform: translate(-230px, 90px);
+  }
+}
+
+@media (max-width: 380px) {
+
+  body,
+  html {
+    border-radius: 0;
+  }
+  .google button,
+  .fb button {
+    min-width: 240px;
+    width: 240px;
+  }
+  .google,
+.fb {
+  flex-shrink: 0;
+}
+
+  .container {
+    border-radius: 0;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .login {
+    font-size: 20px;
+    transform: translate(-23px, 0px);
+  }
+
+  .more {
+    font-size: 13px;
+    transform: translate(-20px, 5px);
+  }
+
+  .first img{
+    transform: translate(-23px, 15px);
+  }
+  .second img{
+    transform: translate(13px, 30px);
+  }
+  
+  .first input,
+  .second input {
+    width: 100%;
+    padding: 10px 0 10px 35px;
+    font-size: 13px;
+  }
+
+  .first input {
+    width: 100%;
+    font-size: 13px;
+    transform: translate(-20px, 15px);
+  }
+  .second input {
+    width: 100%;
+    font-size: 13px;
+    transform: translate(17px, 30px);
+  }
+
+  .enter button {
+    width: 100%;
+    transform: translate(-25px, 50px);
+  }
+
+  .texth {
+    font-size: 18px;
+  }
+
+  .imge3 img,
+  .imge4 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .google,
+  .fb {
+    width: 100%;
+  }
+
+  .google button {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    transform: translate(170px, 0px);
+  }
+  .fb button {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    transform: translate(-230px, 90px);
+  }
+  .with{
+    transform: translate(-22px,-52px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1;
+    width: 100%;
+    min-height: 500px;
+  }
+
+  .right {
+    flex: 1;
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .imge1 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .imge3 img {
+    width: 80%;
+    height: auto;
+    max-width: 300px;
+  }
+
+  .imge4 img {
+    width: 80%;
+    height: auto;
+    max-width: 400px;
+  }
+
+  .texth {
+    font-size: 24px;
+    position: relative;
+    margin-top: 20px;
+    right: auto;
+    text-align: center;
+  }
+
+  .login {
+    position: relative;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-right: 0;
+  }
+
+  .more {
+    position: relative;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 0;
+  }
+
+  .first {
+    position: relative;
+    left: auto;
+    margin-top: 20px;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .second {
+    position: relative;
+    left: auto;
+    margin-top: 15px;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .enter button {
+    position: relative;
+    left: auto;
+    margin-top: 20px;
+    width: 150px;
+  }
+
+  .line,
+  .line2 {
+    position: relative;
+    margin-top: 20px;
+    left: auto;
+  }
+
+  .with {
+    position: relative;
+    margin-top: 20px;
+    left: auto;
+  }
+
+  .google {
+    position: relative;
+    left: auto;
+    margin-top: 20px;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .fb {
+    position: relative;
+    left: auto;
+    margin-top: 15px;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .divider,
+  .divider2 {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    border-radius: 0;
+  }
+
+  body,
+  html {
+    border-radius: 0;
+  }
+
+  .left {
+    padding: 30px 20px;
+    min-height: 400px;
+  }
+
+  .right {
+    padding: 30px 20px;
+    min-height: 350px;
+  }
+
+  .first input,
+  .second input {
+    padding: 8px 0 8px 30px;
+    font-size: 14px;
+  }
+
+  .login {
+    font-size: 24px;
+  }
+
+  .more {
+    font-size: 14px;
+  }
+
+  .texth {
+    font-size: 20px;
+  }
+
+  .enter button {
+    padding: 8px;
+    font-size: 12px;
+    width: 120px;
+  }
+
+  .with {
+    font-size: 16px;
+  }
+
+  .google button,
+  .fb button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    height: auto;
+    flex-direction: column;
+    border-radius: 0;
+  }
+
+  .left {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .right {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .login {
+    font-size: 20px;
+    margin-top: 0;
+  }
+
+  .more {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+  .first,
+  .second {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .first input,
+  .second input {
+    width: 100%;
+    padding: 10px 0 10px 35px;
+    font-size: 13px;
+  }
+
+  .enter button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .texth {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  .texth p {
+    margin: 5px 0;
+  }
+
+  .imge3 img,
+  .imge4 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .with {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .google,
+  .fb {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+
+  .google button,
+  .fb button {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+;
+  }
+  
+  .more {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  
+  .first, .second {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .first input, .second input {
+    width: 100%;
+    padding: 10px 0 10px 35px;
+    font-size: 13px;
+  }
+  
+  .enter button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .texth {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  
+  .texth p {
+    margin: 5px 0;
+  }
+  
+  .imge3 img, .imge4 img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .with {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  
+  .google, .fb {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+  
+  .google button, .fb button {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+;
+  }
+  
+  .more {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  
+  .first, .second {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .first input, .second input {
+    width: 100%;
+    padding: 10px 0 10px 35px;
+    font-size: 13px;
+  }
+  
+  .enter button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .texth {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  
+  .texth p {
+    margin: 5px 0;
+  }
+  
+  .imge3 img, .imge4 img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .with {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  
+  .google, .fb {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+  
+  .google button, .fb button {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+@media (max-width: 322px) {
+
+  body,
+  html {
+    border-radius: 0;
+  }
+  .google button,
+  .fb button {
+    min-width: 240px;
+    width: 240px;
+  }
+  .google,
+.fb {
+  flex-shrink: 0;
+}
+
+  .container {
+    border-radius: 0;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .login {
+    font-size: 20px;
+    transform: translate(-23px, 0px);
+  }
+
+  .more {
+    font-size: 13px;
+    transform: translate(-20px, 5px);
+  }
+
+  .first img{
+    transform: translate(-30px, 15px);
+  }
+  .second img{
+    transform: translate(33px, 30px);
+  }
+  
+  .first input,
+  .second input {
+    width: 100%;
+    padding: 10px 0 10px 35px;
+    font-size: 13px;
+  }
+
+  .first input {
+    width: 100%;
+    font-size: 13px;
+    transform: translate(-30px, 15px);
+  }
+  .second input {
+    width: 100%;
+    font-size: 13px;
+    transform: translate(35px, 30px);
+  }
+
+  .enter button {
+    width: 100%;
+    transform: translate(-20px, 50px);
+  }
+
+  .texth {
+    font-size: 18px;
+  }
+
+  .imge3 img,
+  .imge4 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .google,
+  .fb {
+    width: 100%;
+  }
+
+  .google button {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    transform: translate(170px, 0px);
+  }
+  .fb button {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    transform: translate(-230px, 90px);
+  }
+}

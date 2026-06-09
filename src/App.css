@@ -2,12 +2,9 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: black;
-  /* Remove overflow: hidden so scrollable pages can scroll */
 }
 
-/* Pages that should NOT scroll (login, welcome, designs, courses) use overflow:hidden on their own container */
-/* Pages that SHOULD scroll (about, contact) use min-height and overflow-y:auto on their own container */
-
+/* ── Login page specific layout ── */
 .container {
   display: flex;
   justify-content: center;
@@ -16,9 +13,9 @@ body {
   background-color: lightgray;
 }
 
-.form-box{
-  margin-left:-190px;
-  margin-top:50px;
+.form-box {
+  margin-left: -190px;
+  margin-top: 50px;
   justify-content: center;
   align-items: center;
   background-color: white;
@@ -27,66 +24,63 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   width: 500px;
 }
+
 .form-box h1 {
   text-align: center;
   color: lightcoral;
 }
 
-input,
-textarea,
-select {
+/* Scoped to login form only — does NOT affect page buttons */
+.form-box input,
+.form-box textarea,
+.form-box select {
   padding: 10px;
   margin-top: 8px;
   margin-bottom: 15px;
   box-sizing: border-box;
 }
 
-button {
-  padding: 10px;
-  background-color: lightgray;
-  color: black;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: gray;
-}
 .Submissions h1 {
   text-align: center;
   color: lightcoral;
 }
+
 .table-box {
   margin-right: -40px;
 }
-.table-box{
-   background-color:white;
-   width:800px;
-   position:absolute;
-   right:50px;
-   top:50px;
-   padding: 20px;
-   border-radius: 5px;
+
+.table-box {
+  background-color: white;
+  width: 800px;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  padding: 20px;
+  border-radius: 5px;
 }
-table{
+
+table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
-th{
+
+th {
   background-color: lightgray;
   padding: 12px;
   border: 1px solid black;
 }
-td{
+
+td {
   padding: 10px;
   border: 1px solid black;
   text-align: center;
 }
-.table-box button{
-   background-color: lightgray;
-   width:60px;
-   height: 30px;
-   border-radius: 5px;
-   text-align: center;
+
+.table-box button {
+  background-color: lightgray;
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
 }

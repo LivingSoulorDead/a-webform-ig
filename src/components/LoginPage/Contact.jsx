@@ -6,6 +6,7 @@ function Contact() {
   const navigate = useNavigate();
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", subject: "", message: "" });
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     const username = localStorage.getItem("username");
@@ -16,13 +17,48 @@ function Contact() {
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    // Clear error for this field on change
+    if (errors[e.target.name]) {
+      setErrors({ ...errors, [e.target.name]: "" });
+    }
+  };
+
+  const validate = () => {
+    const newErrors = {};
+    if (!form.firstName.trim()) newErrors.firstName = "First name is required.";
+    if (!form.lastName.trim()) newErrors.lastName = "Last name is required.";
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+    if (!form.subject) newErrors.subject = "Please select a topic.";
+    if (!form.message.trim()) newErrors.message = "Message cannot be empty.";
+    return newErrors;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const newErrors = validate();
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    // Save to localStorage
+    const existing = JSON.parse(localStorage.getItem("contactSubmissions") || "[]");
+    const entry = {
+      ...form,
+      submittedAt: new Date().toISOString(),
+      submittedBy: localStorage.getItem("username") || "Unknown",
+    };
+    existing.push(entry);
+    localStorage.setItem("contactSubmissions", JSON.stringify(existing));
+
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
     setForm({ firstName: "", lastName: "", email: "", subject: "", message: "" });
+    setErrors({});
   };
 
   return (
@@ -32,7 +68,8 @@ function Contact() {
       <section className="contact-hero">
         <h1>Let's talk.</h1>
         <p className="contact-hero-sub">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.        </p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
       </section>
 
       {/* Main: info + form */}
@@ -46,16 +83,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           </div>
 
           <div className="contact-card">
-            <div className="contact-card-icon"></div>
+            <div className="contact-card-icon">✉️</div>
             <div className="contact-card-body">
               <h4>Email</h4>
               <p>LoremIpsum@gmail.com</p>
-              <span>For general inquiries & support</span>
+              <span>For general inquiries &amp; support</span>
             </div>
           </div>
 
           <div className="contact-card">
-            <div className="contact-card-icon"></div>
+            <div className="contact-card-icon">📞</div>
             <div className="contact-card-body">
               <h4>Phone</h4>
               <p>+91 987XXXXXxXXX</p>
@@ -64,15 +101,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           </div>
 
           <div className="contact-card">
-            <div className="contact-card-icon"></div>
+            <div className="contact-card-icon">📍</div>
             <div className="contact-card-body">
               <h4>Office</h4>
               <p>Lorem Ipsum</p>
               <span>Lorem, Ipsum – 111111</span>
             </div>
           </div>
-
-          
         </div>
 
         {/* Right: form */}
@@ -88,62 +123,77 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           ) : (
             <>
               <h3>Send us a message.</h3>
-              <p>Fill in the form and we'll be in touch shortly.</p>
+              <p>Fill in all fields and we'll be in touch shortly.</p>
 
               <div className="form-row">
                 <div className="form-field">
-                  <label>First Name</label>
+                  <label>First Name *</label>
                   <input
                     type="text"
                     name="firstName"
-                    placeholder="Name"
+                    placeholder="First name"
                     value={form.firstName}
                     onChange={handleChange}
+                    className={errors.firstName ? "input-error" : ""}
                   />
+                  {errors.firstName && <span className="field-error">{errors.firstName}</span>}
                 </div>
                 <div className="form-field">
-                  <label>Last Name</label>
+                  <label>Last Name *</label>
                   <input
                     type="text"
                     name="lastName"
-                    placeholder="Name"
+                    placeholder="Last name"
                     value={form.lastName}
                     onChange={handleChange}
+                    className={errors.lastName ? "input-error" : ""}
                   />
+                  {errors.lastName && <span className="field-error">{errors.lastName}</span>}
                 </div>
               </div>
 
               <div className="form-field">
-                <label>Email Address</label>
+                <label>Email Address *</label>
                 <input
                   type="email"
                   name="email"
                   placeholder="username@example.com"
                   value={form.email}
                   onChange={handleChange}
+                  className={errors.email ? "input-error" : ""}
                 />
+                {errors.email && <span className="field-error">{errors.email}</span>}
               </div>
 
               <div className="form-field">
-                <label>Subject</label>
-                <select name="subject" value={form.subject} onChange={handleChange}>
+                <label>Subject *</label>
+                <select
+                  name="subject"
+                  value={form.subject}
+                  onChange={handleChange}
+                  className={errors.subject ? "input-error" : ""}
+                >
                   <option value="">Select a topic...</option>
                   <option value="courses">Option 1</option>
                   <option value="designs">Option 2</option>
                   <option value="support">Option 3</option>
                   <option value="billing">Option 4</option>
                 </select>
+                {errors.subject && <span className="field-error">{errors.subject}</span>}
               </div>
 
               <div className="form-field">
-                <label>Message</label>
+                <label>Message *</label>
                 <textarea
                   name="message"
                   placeholder="Tell us what's on your mind..."
                   value={form.message}
                   onChange={handleChange}
+                  className={errors.message ? "input-error" : ""}
                 />
+                {errors.message && <span className="field-error">{errors.message}</span>}
               </div>
+
               <button className="submit-btn" onClick={handleSubmit}>
                 Send Message →
               </button>
@@ -156,7 +206,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       {/* Hours + FAQ */}
       <div className="contact-extra">
         <div className="contact-extra-inner">
-
           <div className="contact-hours">
             <h3>Business hours.</h3>
             <div className="hours-list">
@@ -191,7 +240,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
               ))}
             </div>
           </div>
-
         </div>
       </div>
 

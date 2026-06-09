@@ -1,38 +1,31 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .designs-page {
   height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   background: #0d0d0d;
-  padding: 28px 32px 20px;
+  padding: 24px 32px 20px;
   font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
 }
 
 .designs-title {
   font-family: 'Syne', sans-serif;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 800;
   color: #ffffff;
   letter-spacing: -1px;
-  margin-bottom: 24px;
+  margin: 0 0 20px 0;
   flex-shrink: 0;
-  transform: translateY(-40px);
 }
 
 .designs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 16px;
+  gap: 14px;
   flex: 1;
   min-height: 0;
-  transform: translateY(-40px);
 }
 
 .design-card {
@@ -40,7 +33,6 @@
   overflow: hidden;
   border: 1.5px solid #2a2a2a;
   transition: border-color 0.3s ease, transform 0.3s ease;
-  transform: translateY(-10px);
 }
 
 .design-card:hover {
@@ -88,12 +80,11 @@
   flex-shrink: 0;
   display: flex;
   justify-content: center;
-  padding-top: 18px;
-  transform: translateY(-60px);
+  padding-top: 16px;
 }
 
 .back-btn {
-  padding: 12px 40px;
+  padding: 10px 36px;
   background: transparent;
   color: #fff;
   border: 1.5px solid #444;
@@ -103,26 +94,16 @@
   font-weight: 500;
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
-  width: 120px;
-  
 }
 
 .back-btn:hover {
-  background: #888;
+  background: #555;
   border-color: #888;
 }
 
-/* Tablet */
 @media (max-width: 768px) {
-  .designs-page {
-    padding: 20px 18px 16px;
-  }
-
-  .designs-title {
-    font-size: 28px;
-    margin-bottom: 18px;
-  }
-
+  .designs-page { padding: 20px 18px 16px; }
+  .designs-title { font-size: 26px; margin-bottom: 16px; }
   .designs-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -130,25 +111,9 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
-  .designs-page {
-    padding: 16px 14px 14px;
-  }
-
-  .designs-title {
-    font-size: 24px;
-    margin-bottom: 14px;
-  }
-
-  .designs-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
-  }
-
-  .back-btn {
-    padding: 10px 32px;
-    font-size: 13px;
-  }
+  .designs-page { padding: 16px 14px 14px; }
+  .designs-title { font-size: 22px; margin-bottom: 14px; }
+  .designs-grid { gap: 10px; }
+  .back-btn { padding: 9px 28px; font-size: 13px; }
 }

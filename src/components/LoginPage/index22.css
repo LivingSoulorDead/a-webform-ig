@@ -13,6 +13,7 @@ html {
   background-color: rgb(0, 0, 0);
   height: 100%;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 #root {
@@ -25,12 +26,13 @@ html {
   position: relative;
   height: 100vh;
   background-color: white;
+  overflow-x: hidden;
 }
 
 .imge1 img {
   display: flex;
   height: 100vh;
-  width: 562px;
+  width: 866px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -47,37 +49,37 @@ html {
   display: flex;
   position: absolute;
   top: -346.5px;
-  right: -0px;
+  right: -13px;
 }
 
 .imge3 {
   position: absolute;
-  top: -250%;
-  left: 34%;
+  top: -320%;
+  left: 40%;
   z-index: 2;
 }
 
 .imge3 img {
-  width: 400px;
-  height: 500px;
+  width: 500px;
+  height: 600px;
 }
 
 .imge2 {
   position: absolute;
   top: 140px;
-  right: 435px;
+  right: 628px;
   z-index: 4;
 }
 
 .imge4 img {
-  width: 730px;
-  height: 450px;
+  width: 780px;
+  height: 500px;
 }
 
 .imge4 {
   position: absolute;
-  top: -150px;
-  right: -30px;
+  top: -155px;
+  right: -50px;
   z-index: 3;
 }
 
@@ -85,11 +87,15 @@ html {
   position: absolute;
   z-index: 5;
   font-family: 'Arial';
-  font-size: 35px;
+  font-size: 45px;
   text-align: left;
-  margin-top: -190px;
-  right: 270px;
+  margin-top: -280px;
+  right: 370px;
   color: white;
+  padding: 20px;
+  gap: 20px;
+  letter-spacing: 1.5px;
+  line-height: 0.6;
 }
 
 .login {
@@ -124,7 +130,7 @@ html {
   position: absolute;
   z-index: 8;
   margin-top: -150px;
-  left: 125px;
+  left: 215px;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -180,7 +186,7 @@ html {
   position: absolute;
   z-index: 9;
   margin-top: -90px;
-  left: 125px;
+  left: 215px;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -214,7 +220,7 @@ html {
   color: white;
   background: linear-gradient(to right, #9181F4, #5038ED);
   margin-top: 0px;
-  left: 230px;
+  left: 310px;
   display: flex;
   padding: 10px;
   width: 105px;
@@ -227,7 +233,7 @@ html {
   position: absolute;
   z-index: 11;
   margin-top: 190px;
-  left: 70px;
+  left: 180px;
   display: flex;
   padding: 10px;
   width: 100px;
@@ -238,7 +244,7 @@ html {
   position: absolute;
   z-index: 11;
   margin-top: 190px;
-  left: 370px;
+  left: 450px;
   display: flex;
   padding: 10px;
   width: 100px;
@@ -252,7 +258,7 @@ html {
   text-align: left;
   margin-top: 210px;
   align-items: left;
-  left: 197px;
+  left: 280px;
   color: black;
 }
 
@@ -260,7 +266,7 @@ html {
   position: absolute;
   z-index: 8;
   margin-top: 150px;
-  left: 125px;
+  left: 225px;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -300,7 +306,7 @@ html {
   position: absolute;
   z-index: 8;
   margin-top: 220px;
-  left: 125px;
+  left: 225px;
   display: flex;
   align-items: center;
   padding: 10px;

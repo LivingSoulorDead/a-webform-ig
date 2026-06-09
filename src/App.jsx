@@ -28,7 +28,7 @@ function App() {
 
         {/* Pages with common header */}
         <Route element={<Layout />}>
-          <Route path="/welcome" element={<Welcome />} />
+          <Route path="/" element={<Welcome />} />
           <Route path="/designs" element={<Designs />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/about" element={<About />} />

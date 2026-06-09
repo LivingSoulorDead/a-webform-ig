@@ -12,7 +12,7 @@ function Welcome() {
       location.state?.username || localStorage.getItem("username");
 
     if (!storedUsername) {
-      navigate("/", { replace: true });
+      navigate("/loginn", { replace: true });
       return;
     }
 
@@ -23,7 +23,7 @@ function Welcome() {
     window.history.pushState(null, "", window.location.href);
 
     const handlePopState = () => {
-      navigate("/welcome", { replace: true });
+      navigate("/", { replace: true });
     };
 
     window.addEventListener("popstate", handlePopState);
@@ -35,7 +35,7 @@ function Welcome() {
 
   const handleLogout = () => {
     localStorage.removeItem("username");
-    navigate("/", { replace: true });
+    navigate("/loginn", { replace: true });
   };
 
   return (
@@ -50,7 +50,7 @@ function Welcome() {
         <button className="btn2" onClick={() => navigate("/courses")}>
           Show Available Courses
         </button>
-        
+
         <button className="btn" onClick={handleLogout}>
           Logout
         </button>

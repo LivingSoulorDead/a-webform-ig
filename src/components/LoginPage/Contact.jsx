@@ -8,7 +8,7 @@ function Contact(){
     useEffect(() => {
         const username = localStorage.getItem("username");
         if (!username) {
-          navigate("/", { replace: true });
+          navigate("/loginn", { replace: true });
         }
       }, [navigate]);
 
@@ -25,7 +25,7 @@ function Contact(){
                     Address: 123 Main Street, Anytown, USA
                 </p>
                 <div className="contact-footer">
-                    <button className="back-btn" onClick={() => navigate("/welcome")}>
+                    <button className="back-btn" onClick={() => navigate("/")}>
                         Back
                     </button>
                 </div>

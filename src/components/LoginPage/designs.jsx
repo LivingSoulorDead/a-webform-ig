@@ -25,7 +25,7 @@ function Designs() {
   useEffect(() => {
     const username = localStorage.getItem("username");
     if (!username) {
-      navigate("/", { replace: true });
+      navigate("/loginn", { replace: true });
     }
   }, [navigate]);
 
@@ -54,7 +54,7 @@ function Designs() {
       </div>
 
       <div className="designs-footer">
-        <button className="back-btn" onClick={() => navigate("/welcome")}>
+        <button className="back-btn" onClick={() => navigate("/")}>
           ← Back
         </button>
       </div>

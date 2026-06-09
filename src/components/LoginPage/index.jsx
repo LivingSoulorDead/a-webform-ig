@@ -22,7 +22,7 @@ function LoginPage() {
 
   useEffect(() => {
     if (localStorage.getItem("username")) {
-      navigate("/welcome", { replace: true });
+      navigate("/", { replace: true });
     }
   }, [navigate]);
 
@@ -62,7 +62,7 @@ function LoginPage() {
     }
 
     localStorage.setItem("username", trimmedUsername);
-    navigate("/welcome", { replace: true, state: { username: trimmedUsername } });
+    navigate("/", { replace: true, state: { username: trimmedUsername } });
   };
 
   return (

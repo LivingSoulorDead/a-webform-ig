@@ -144,8 +144,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                   onChange={handleChange}
                 />
               </div>
-{/* onClick={handleSubmit} */}
-              <button className="submit-btn" >
+              <button className="submit-btn" onClick={handleSubmit}>
                 Send Message →
               </button>
               <span className="form-note">We typically respond within one business day.</span>

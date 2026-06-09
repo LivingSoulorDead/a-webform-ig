@@ -52,7 +52,7 @@
 
 body {
   margin: 0;
-  overflow: hidden;
+  /* No overflow:hidden here — individual pages handle their own scroll needs */
 }
 
 #root {
@@ -64,7 +64,7 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  overflow: hidden;
+  /* overflow:hidden removed — scrollable pages need to scroll */
 }
 
 h1,

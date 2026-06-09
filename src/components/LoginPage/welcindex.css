@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 
   background-color: rgb(180, 159, 210);
   background-image: url("src/assets/360_F_406607245_daS9yMQ9g8MMZz3XWf2LVXxFy5cAdLQ7.jpg");
@@ -120,7 +120,7 @@ h2 {
   .welcome-container {
     padding: 0 18px;
     height: auto;
-    min-height: 100vh;
+    min-height: 100%;
   }
 
   h2 {

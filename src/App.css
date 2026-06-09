@@ -2,8 +2,11 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: black;
-  overflow: hidden;
+  /* Remove overflow: hidden so scrollable pages can scroll */
 }
+
+/* Pages that should NOT scroll (login, welcome, designs, courses) use overflow:hidden on their own container */
+/* Pages that SHOULD scroll (about, contact) use min-height and overflow-y:auto on their own container */
 
 .container {
   display: flex;
@@ -32,7 +35,6 @@ body {
 input,
 textarea,
 select {
-  width: 100%;
   padding: 10px;
   margin-top: 8px;
   margin-bottom: 15px;
@@ -40,7 +42,6 @@ select {
 }
 
 button {
-  width: 100%;
   padding: 10px;
   background-color: lightgray;
   color: black;

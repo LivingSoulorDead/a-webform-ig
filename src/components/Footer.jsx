@@ -13,12 +13,7 @@ function Footer() {
           <p className="footer-tagline">
             Helping learners and creators do their best work — through courses, design tools, and a community that cares.
           </p>
-          <div className="footer-social">
-            <button className="footer-social-btn" title="Twitter/X">𝕏</button>
-            <button className="footer-social-btn" title="Instagram">📸</button>
-            <button className="footer-social-btn" title="LinkedIn">💼</button>
-            <button className="footer-social-btn" title="YouTube">▶️</button>
-          </div>
+          
         </div>
 
         {/* Explore */}
@@ -37,9 +32,6 @@ function Footer() {
           <h4>Support</h4>
           <ul>
             <li><a href="/contact">Contact Us</a></li>
-            <li><a href="/contact">Help Center</a></li>
-            <li><a href="/contact">Report a Bug</a></li>
-            <li><a href="/contact">Feedback</a></li>
           </ul>
         </div>
 
@@ -47,9 +39,9 @@ function Footer() {
         <div className="footer-col">
           <h4>Contact</h4>
           <ul>
-            <li><a href="mailto:hello@myform.io">hello@myform.io</a></li>
-            <li><a href="tel:+919876543210">+91 98765 43210</a></li>
-            <li><a href="/contact">Noida, UP – 201301</a></li>
+            <li><a href="mailto:hello@myform.io">loreamipsum@gmail.com</a></li>
+            <li><a href="tel:+919876543210">+91 98XXXXXXXX</a></li>
+            <li><a href="/contact">Lorem, Ipsum – 111111</a></li>
             <li><a href="/contact">Mon–Fri, 10 AM–6 PM</a></li>
           </ul>
         </div>

@@ -30,11 +30,9 @@ function Contact() {
 
       {/* Hero */}
       <section className="contact-hero">
-        <span className="contact-hero-label">Contact Us</span>
         <h1>Let's talk.</h1>
         <p className="contact-hero-sub">
-          Have a question, a project idea, or just want to say hi? We'd love to hear from you. We usually respond within 24 hours.
-        </p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.        </p>
       </section>
 
       {/* Main: info + form */}
@@ -51,7 +49,7 @@ function Contact() {
             <div className="contact-card-icon"></div>
             <div className="contact-card-body">
               <h4>Email</h4>
-              <p>hello@myform.io</p>
+              <p>LoremIpsum@gmail.com</p>
               <span>For general inquiries & support</span>
             </div>
           </div>
@@ -60,7 +58,7 @@ function Contact() {
             <div className="contact-card-icon"></div>
             <div className="contact-card-body">
               <h4>Phone</h4>
-              <p>+91 98765 43210</p>
+              <p>+91 987XXXXXxXXX</p>
               <span>Mon – Fri, 10 AM – 6 PM IST</span>
             </div>
           </div>
@@ -69,20 +67,12 @@ function Contact() {
             <div className="contact-card-icon"></div>
             <div className="contact-card-body">
               <h4>Office</h4>
-              <p>42 Creator's Lane, Sector 5</p>
-              <span>Noida, Uttar Pradesh – 201301</span>
+              <p>Lorem Ipsum</p>
+              <span>Lorem, Ipsum – 111111</span>
             </div>
           </div>
 
-          <div className="contact-social">
-            <p>Follow us</p>
-            <div className="social-links">
-              <button className="social-btn" title="Twitter/X"></button>
-              <button className="social-btn" title="Instagram"></button>
-              <button className="social-btn" title="LinkedIn"></button>
-              <button className="social-btn" title="YouTube"></button>
-            </div>
-          </div>
+          
         </div>
 
         {/* Right: form */}
@@ -106,7 +96,7 @@ function Contact() {
                   <input
                     type="text"
                     name="firstName"
-                    placeholder="Archit"
+                    placeholder="Name"
                     value={form.firstName}
                     onChange={handleChange}
                   />
@@ -116,7 +106,7 @@ function Contact() {
                   <input
                     type="text"
                     name="lastName"
-                    placeholder="Kumar"
+                    placeholder="Name"
                     value={form.lastName}
                     onChange={handleChange}
                   />
@@ -128,7 +118,7 @@ function Contact() {
                 <input
                   type="email"
                   name="email"
-                  placeholder="you@example.com"
+                  placeholder="username@example.com"
                   value={form.email}
                   onChange={handleChange}
                 />
@@ -138,11 +128,10 @@ function Contact() {
                 <label>Subject</label>
                 <select name="subject" value={form.subject} onChange={handleChange}>
                   <option value="">Select a topic...</option>
-                  <option value="courses">Course Inquiry</option>
-                  <option value="designs">Designs & Portfolio</option>
-                  <option value="support">Technical Support</option>
-                  <option value="billing">Billing</option>
-                  <option value="other">Something else</option>
+                  <option value="courses">Option 1</option>
+                  <option value="designs">Option 2</option>
+                  <option value="support">Option 3</option>
+                  <option value="billing">Option 4</option>
                 </select>
               </div>
 
@@ -155,8 +144,8 @@ function Contact() {
                   onChange={handleChange}
                 />
               </div>
-
-              <button className="submit-btn" onClick={handleSubmit}>
+{/* onClick={handleSubmit} */}
+              <button className="submit-btn" >
                 Send Message →
               </button>
               <span className="form-note">We typically respond within one business day.</span>

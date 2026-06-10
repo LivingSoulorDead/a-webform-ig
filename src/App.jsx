@@ -10,6 +10,8 @@ import Courses from "./components/LoginPage/Courses";
 import About from "./components/LoginPage/About";
 import Contact from "./components/LoginPage/Contact";
 import Profile from "./components/LoginPage/Profile";
+import Mydes from "./components/LoginPage/Mydes";
+import Myord from "./components/LoginPage/Myord";
 
 // Pages that have their own full-height fixed layout (no footer, no scroll)
 const NO_FOOTER_PATHS = ["/loginn"];
@@ -50,6 +52,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/mydes" element={<Mydes />} />
+          <Route path="/myord" element={<Myord />} />
         </Route>
 
         {/* Redirect unknown routes */}

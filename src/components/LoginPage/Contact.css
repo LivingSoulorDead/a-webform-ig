@@ -91,6 +91,7 @@
   background: linear-gradient(135deg, #e8dce4, #d5c4cf);
   color: #9e8090;
   transform: translate(110px,-18px);
+  justify-content: center;
 }
 
 .contact-card-body-email {
@@ -99,6 +100,7 @@
   position: relative;
   transform: translate(-35px,22px);
   align-items: center;
+  justify-content: center;
 }
 
 .contact-card-body-phone {
@@ -107,12 +109,14 @@
   position: relative;
   transform: translate(-30px,22px);
   align-items: center;
+  justify-content: center;
 }
 
 .contact-card-body-office {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: relative;
   transform: translate(-18px,22px);
 }
@@ -148,6 +152,7 @@
   padding: 22px 24px;
   display: flex;
   align-items: flex-start;
+  justify-content: flex-start;
   gap: 16px;
   transition: box-shadow 0.25s ease, transform 0.25s ease;
   

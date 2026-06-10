@@ -29,7 +29,15 @@ function Profile() {
             <h2>Welcome back, {username}!</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         </div>
+        <div className="profile buttons-des">
+      <button className="profile-button" onClick={() => navigate("/mydes")}>My Designs</button>
     </div>
+    <div className="profile buttons-ord">
+      <button className="profile-button" onClick={() => navigate("/myord")}>My Orders</button>
+    </div>
+    </div>
+    
+    
     );
 }
 export default Profile;

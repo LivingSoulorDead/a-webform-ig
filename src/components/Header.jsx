@@ -42,8 +42,8 @@ function Header() {
           </button>
           {homeOpen && (
             <div className="dropdown-menu">
-              <button onClick={() => { navigate("/designs"); setHomeOpen(false); }}>🎨 Designs</button>
-              <button onClick={() => { navigate("/courses"); setHomeOpen(false); }}>📚 Courses</button>
+              <button onClick={() => { navigate("/designs"); setHomeOpen(false); }}>Designs</button>
+              <button onClick={() => { navigate("/courses"); setHomeOpen(false); }}>Courses</button>
             </div>
           )}
         </div>
@@ -68,15 +68,14 @@ function Header() {
                 <span className="avatar lg">{username.charAt(0).toUpperCase()}</span>
                 <div>
                   <div className="dh-name">{username}</div>
-                  <div className="dh-role">Member</div>
                 </div>
               </div>
               <hr className="dropdown-divider" />
-              <button onClick={() => { navigate("/about"); setProfileOpen(false); }}>👤 View Profile</button>
-              <button onClick={() => { navigate("/courses"); setProfileOpen(false); }}>📚 My Courses</button>
-              <button onClick={() => { navigate("/designs"); setProfileOpen(false); }}>🎨 My Designs</button>
+              <button onClick={() => { navigate("/about"); setProfileOpen(false); }}>View Profile</button>
+              <button onClick={() => { navigate("/courses"); setProfileOpen(false); }}>Courses</button>
+              <button onClick={() => { navigate("/designs"); setProfileOpen(false); }}>Designs</button>
               <hr className="dropdown-divider" />
-              <button className="logout-item" onClick={handleLogout}>🚪 Logout</button>
+              <button className="logout-item" onClick={handleLogout}>Logout</button>
             </div>
           )}
         </div>

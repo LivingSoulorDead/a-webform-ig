@@ -12,6 +12,9 @@
 /* ── Hero ── */
 .contact-hero {
   background: linear-gradient(135deg, #7c6575 0%, #9e8090 60%, #b89fab 100%);
+  background-image: url('src/assets/Screenshot 2025-09-09 223451.png');
+  background-size: cover;
+  background-position: center;
   padding: 72px 48px 64px;
   text-align: center;
   position: relative;
@@ -94,6 +97,8 @@
   color: #7c6e74;
   line-height: 1.65;
   margin: 0;
+  text-align: left;
+  transform: translateX(30px);
 }
 
 .contact-card {

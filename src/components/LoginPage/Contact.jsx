@@ -229,9 +229,9 @@ function Contact() {
             <h3>Common questions.</h3>
             <div className="faq-list">
               {[
-                { q: "How quickly do you respond?", a: "We aim to reply to all messages within 24 hours on business days." },
-                { q: "Can I get a refund on a course?", a: "Yes — we offer a 7-day money-back guarantee on all purchases, no questions asked." },
-                { q: "Do you offer team or institutional plans?", a: "Absolutely. Reach out via the form above and we'll create a custom plan for your team." },
+                { q: "Lorem Ipsum", a: "Lorem Lorem" },
+                { q: "Lorem Ipsum Ipsum?", a: "Loreeeeem" },
+                { q: "Lorem! Ipsum?", a: "Ipsum" },
               ].map((faq, i) => (
                 <div className="faq-item" key={i}>
                   <h4>{faq.q}</h4>

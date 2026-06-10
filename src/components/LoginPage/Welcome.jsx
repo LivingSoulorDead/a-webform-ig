@@ -27,7 +27,6 @@ function Welcome() {
     <div className="welcome-container">
       <div className="welcome-content">
         <h2>Welcome back, {username}!</h2>
-        <p className="welcome-sub">Use the navigation above to explore Designs, Courses, and more.</p>
       </div>
     </div>
   );

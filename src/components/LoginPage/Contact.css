@@ -91,14 +91,17 @@
 }
 
 .contact-card-body-email {
+  position: relative;
   transform: translate(-55px,22px);
 }
 
 .contact-card-body-phone {
+  position: relative;
   transform: translate(-30px,22px);
 }
 
 .contact-card-body-office {
+  position: relative;
   transform: translate(-30px,22px);
 }
 

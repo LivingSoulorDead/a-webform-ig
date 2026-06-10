@@ -23,17 +23,32 @@ function Profile() {
     return () => window.removeEventListener("popstate", handlePopState);
   }, [navigate]);
 
+  const handleLogout = () => {
+    localStorage.removeItem("username");
+    navigate("/loginn", { replace: true });
+  };
     return (    
     <div className="profile-container">
+      <div className="profiler">
         <div className="profile-content">
-            <h2>Welcome back, {username}!</h2>
+            <h2>Hello {username}</h2>
+            <br />
+            <br />
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         </div>
+        <br />
+        <br />
         <div className="profile buttons-des">
       <button className="profile-button" onClick={() => navigate("/mydes")}>My Designs</button>
     </div>
+    <br/>
     <div className="profile buttons-ord">
-      <button className="profile-button" onClick={() => navigate("/myord")}>My Orders</button>
+      <button className="profile-button" onClick={() => navigate("/myor")}>My Orders</button>
+    </div>
+    <br/>
+    <div className="profile buttons-log">
+      <button className="logginout" onClick={handleLogout}>Logout</button>
+    </div>
     </div>
     </div>
     

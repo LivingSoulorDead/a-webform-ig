@@ -1,13 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 .profile-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .profile-content h2{
     color: #333;
     padding: 20px;
-    text-align: top;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.profile-content p {
+    color: rgb(211, 131, 131);
+    text-align: center;
+    font-weight: 600 !important;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.profile-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.profiler{
+    background-image: url("src/assets/Screenshot 2026-06-10 162707.png");
+    background-size: cover;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.profiler button {
+    color: rgb(211, 131, 131);
+    background-color: rgb(58, 47, 47);
+    font-size: 20px;
+    text-align: center;
+    width: 150px;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.profile button:hover {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
 }

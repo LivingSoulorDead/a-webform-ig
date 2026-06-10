@@ -71,7 +71,7 @@ function Header() {
                 </div>
               </div>
               <hr className="dropdown-divider" />
-              <button onClick={() => { navigate("/about"); setProfileOpen(false); }}>View Profile</button>
+              <button onClick={() => { navigate("/profile"); setProfileOpen(false); }}>View Profile</button>
               <button onClick={() => { navigate("/courses"); setProfileOpen(false); }}>Courses</button>
               <button onClick={() => { navigate("/designs"); setProfileOpen(false); }}>Designs</button>
               <hr className="dropdown-divider" />

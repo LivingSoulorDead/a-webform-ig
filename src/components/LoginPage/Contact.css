@@ -84,6 +84,29 @@
   margin-bottom: 8px;
 }
 
+.contact-card-icon {
+  background: linear-gradient(135deg, #e8dce4, #d5c4cf);
+  color: #9e8090;
+  transform: translate(90px,-18px);
+}
+
+.contact-card-body-email {
+  transform: translate(-55px,22px);
+}
+
+.contact-card-body-phone {
+  transform: translate(-30px,22px);
+}
+
+.contact-card-body-office {
+  transform: translate(-30px,22px);
+}
+
+.contact-card{
+  width: 70%;
+  align-self: center;
+}
+
 .contact-info-header h2 {
   font-size: 26px;
   font-weight: 600;

@@ -84,7 +84,7 @@ function Contact() {
 
           <div className="contact-card">
             <div className="contact-card-icon">✉️</div>
-            <div className="contact-card-body">
+            <div className="contact-card-body-email">
               <h4>Email</h4>
               <p>LoremIpsum@gmail.com</p>
               <span>For general inquiries &amp; support</span>
@@ -93,7 +93,7 @@ function Contact() {
 
           <div className="contact-card">
             <div className="contact-card-icon">📞</div>
-            <div className="contact-card-body">
+            <div className="contact-card-body-phone">
               <h4>Phone</h4>
               <p>+91 987XXXXXxXXX</p>
               <span>Mon – Fri, 10 AM – 6 PM IST</span>
@@ -102,7 +102,7 @@ function Contact() {
 
           <div className="contact-card">
             <div className="contact-card-icon">📍</div>
-            <div className="contact-card-body">
+            <div className="contact-card-body-office">
               <h4>Office</h4>
               <p>Lorem Ipsum</p>
               <span>Lorem, Ipsum – 111111</span>

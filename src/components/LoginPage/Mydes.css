@@ -1,0 +1,252 @@
+/* ── My Designs Page ── */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+  --ink: #0f0f0f;
+  --ink-muted: #5a5a6e;
+  --surface: #f7f6f2;
+  --surface-alt: #eeecea;
+  --accent: #5b4fcf;
+  --accent-light: #ede9ff;
+  --white: #ffffff;
+  --danger: #e53935;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+.mydes-container {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--surface);
+  min-height: 100vh;
+  padding: 56px 32px 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.mydes-header {
+  margin-bottom: 40px;
+}
+
+.mydes-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+.mydes-header p {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Upload Zone */
+.upload-zone {
+  border: 2px dashed #cdc9e2;
+  border-radius: 16px;
+  background: var(--white);
+  padding: 52px 32px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.upload-zone:hover,
+.upload-zone.drag-over {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.upload-zone input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.upload-icon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.upload-zone h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+.upload-zone p {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin: 0 0 20px;
+}
+
+.upload-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  pointer-events: none; /* click handled by the file input overlay */
+}
+
+.upload-formats {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.format-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+  background: var(--surface-alt);
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+/* Gallery */
+.mydes-gallery-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mydes-gallery-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+.gallery-count {
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  background: var(--surface-alt);
+  padding: 2px 10px;
+  border-radius: 100px;
+}
+
+.designs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.design-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.design-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.design-card:hover .design-card-overlay {
+  opacity: 1;
+}
+
+.design-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.design-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 15, 15, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.delete-btn {
+  background: var(--white);
+  color: var(--danger);
+  border: none;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.delete-btn:hover {
+  background: #fff0f0;
+}
+
+.design-card-info {
+  padding: 12px 14px;
+  border-top: 1px solid var(--surface-alt);
+}
+
+.design-card-name {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 3px;
+}
+
+.design-card-size {
+  font-size: 0.73rem;
+  color: var(--ink-muted);
+  margin: 0;
+}
+
+/* Empty State */
+.designs-empty {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--ink-muted);
+}
+
+.designs-empty p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .mydes-container {
+    padding: 40px 16px 60px;
+  }
+  .designs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

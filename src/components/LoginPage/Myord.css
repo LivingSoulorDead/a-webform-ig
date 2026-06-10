@@ -1,0 +1,236 @@
+/* ── My Orders Page ── */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+  --ink: #0f0f0f;
+  --ink-muted: #5a5a6e;
+  --surface: #f7f6f2;
+  --surface-alt: #eeecea;
+  --accent: #5b4fcf;
+  --accent-light: #ede9ff;
+  --white: #ffffff;
+  --green: #1a9e5c;
+  --green-light: #e6f7ef;
+  --yellow: #c98c00;
+  --yellow-light: #fff8e1;
+  --red: #d93025;
+  --red-light: #fce8e6;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+.myord-container {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--surface);
+  min-height: 100vh;
+  padding: 56px 32px 80px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header */
+.myord-header {
+  margin-bottom: 40px;
+}
+
+.myord-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+.myord-header p {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Summary Cards */
+.order-summary-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.summary-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 22px 20px;
+  border: 1px solid var(--surface-alt);
+}
+
+.summary-card-value {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.summary-card-label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+}
+
+/* Orders List */
+.orders-list-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.orders-list-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 20px 22px;
+  border: 1px solid var(--surface-alt);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  transition: box-shadow 0.2s;
+}
+
+.order-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.order-icon {
+  font-size: 1.5rem;
+  width: 44px;
+  height: 44px;
+  background: var(--surface-alt);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.order-info {
+  min-width: 0;
+}
+
+.order-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.order-meta {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  margin: 0;
+}
+
+.order-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.order-amount {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.order-status {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+.status-delivered {
+  background: var(--green-light);
+  color: var(--green);
+}
+
+.status-pending {
+  background: var(--yellow-light);
+  color: var(--yellow);
+}
+
+.status-cancelled {
+  background: var(--red-light);
+  color: var(--red);
+}
+
+/* Empty */
+.orders-empty {
+  text-align: center;
+  padding: 64px 24px;
+}
+
+.orders-empty-icon {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.orders-empty h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+.orders-empty p {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .myord-container {
+    padding: 40px 16px 60px;
+  }
+  .order-summary-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .order-card {
+    grid-template-columns: auto 1fr;
+  }
+  .order-right {
+    grid-column: 2;
+    align-items: flex-start;
+  }
+}

@@ -2,11 +2,10 @@
 
 /* ── About page: scrollable, full layout ── */
 .about-page {
-  min-height: unset;
+  min-height: 100vh;
   background-color: #faf9f8;
   font-family: 'Inter', Arial, sans-serif;
-
-
+  box-sizing: border-box;
 }
 
 /* ── Hero ── */
@@ -103,8 +102,10 @@
 .about-mission {
   padding: 72px 48px;
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   text-align: left;
+  box-sizing: border-box;
 }
 
 .section-eyebrow {
@@ -217,7 +218,9 @@
 .about-team {
   padding: 72px 48px;
   max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .about-team-header {
@@ -309,7 +312,9 @@
 
 .about-story-inner {
   max-width: 860px;
+  width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .about-story h2 {
@@ -444,19 +449,46 @@
 @media (max-width: 900px) {
   .about-hero h1 { font-size: 40px; }
   .about-hero { padding: 60px 32px 56px; }
-  .about-mission, .about-values, .about-team, .about-story, .about-cta { padding-left: 28px; padding-right: 28px; }
+  .about-mission, .about-team, .about-story { padding-left: 28px; padding-right: 28px; }
+  .about-values, .about-cta { padding-left: 28px; padding-right: 28px; }
   .values-grid { grid-template-columns: repeat(2, 1fr); }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .about-stats { flex-wrap: wrap; }
   .stat-item { border-right: none; border-bottom: 1px solid #ede9e5; min-width: 50%; }
 }
 
+/* ── Intermediate: tablet portrait (≤750px) ── */
+@media (max-width: 750px) {
+  .about-mission, .about-team, .about-story { padding-top: 52px; padding-bottom: 52px; }
+  .about-values, .about-cta { padding-top: 52px; padding-bottom: 52px; }
+  .about-values-header { margin-bottom: 36px; }
+  .about-team-header { margin-bottom: 32px; }
+  .story-timeline { padding-left: 24px; }
+  .story-item { padding-left: 24px; }
+  .story-dot { left: -33px; }
+}
+
 @media (max-width: 600px) {
   .about-hero h1 { font-size: 30px; }
   .about-hero { padding: 44px 20px 40px; }
-  .about-mission, .about-values, .about-team, .about-story, .about-cta { padding: 48px 20px; }
+  .about-mission, .about-values, .about-team, .about-story, .about-cta { padding: 40px 20px; }
   .values-grid { grid-template-columns: 1fr; }
-  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .team-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .team-card { padding: 20px 14px 18px; }
+  .team-avatar { width: 56px; height: 56px; font-size: 20px; }
   .about-mission h2, .about-values-header h2, .about-team-header h2, .about-story h2, .about-cta h2 { font-size: 26px; }
   .stat-item { min-width: 50%; }
+  .story-timeline { padding-left: 16px; }
+  .story-item { padding-left: 16px; }
+  .story-dot { left: -25px; width: 12px; height: 12px; }
+  .about-values-header { margin-bottom: 28px; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .cta-primary, .cta-secondary { width: 100%; max-width: 280px; }
+}
+
+@media (max-width: 380px) {
+  .team-grid { grid-template-columns: 1fr; }
+  .about-hero h1 { font-size: 26px; }
+  .about-hero-sub { font-size: 15px; }
+  .stat-item { min-width: 100%; }
 }

@@ -25,6 +25,7 @@
   min-height: 100vh;
   padding: 56px 40px 80px;
   max-width: 860px;
+  width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
 }

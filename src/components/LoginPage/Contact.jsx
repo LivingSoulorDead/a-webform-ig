@@ -10,23 +10,18 @@ function Contact() {
 
   useEffect(() => {
     const username = localStorage.getItem("username");
-    if (!username) {
-      navigate("/loginn", { replace: true });
-    }
+    if (!username) navigate("/loginn", { replace: true });
   }, [navigate]);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
-    // Clear error for this field on change
-    if (errors[e.target.name]) {
-      setErrors({ ...errors, [e.target.name]: "" });
-    }
+    if (errors[e.target.name]) setErrors({ ...errors, [e.target.name]: "" });
   };
 
   const validate = () => {
     const newErrors = {};
     if (!form.firstName.trim()) newErrors.firstName = "First name is required.";
-    if (!form.lastName.trim()) newErrors.lastName = "Last name is required.";
+    if (!form.lastName.trim())  newErrors.lastName  = "Last name is required.";
     if (!form.email.trim()) {
       newErrors.email = "Email is required.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
@@ -40,19 +35,10 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newErrors = validate();
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      return;
-    }
+    if (Object.keys(newErrors).length > 0) { setErrors(newErrors); return; }
 
-    // Save to localStorage
     const existing = JSON.parse(localStorage.getItem("contactSubmissions") || "[]");
-    const entry = {
-      ...form,
-      submittedAt: new Date().toISOString(),
-      submittedBy: localStorage.getItem("username") || "Unknown",
-    };
-    existing.push(entry);
+    existing.push({ ...form, submittedAt: new Date().toISOString(), submittedBy: localStorage.getItem("username") || "Unknown" });
     localStorage.setItem("contactSubmissions", JSON.stringify(existing));
 
     setSubmitted(true);
@@ -72,10 +58,10 @@ function Contact() {
         </p>
       </section>
 
-      {/* Main: info + form */}
+      {/* Main */}
       <div className="contact-main">
 
-        {/* Left: contact info */}
+        {/* Left: info */}
         <div className="contact-info">
           <div className="contact-info-header">
             <h2>Reach us directly.</h2>
@@ -128,51 +114,32 @@ function Contact() {
               <div className="form-row">
                 <div className="form-field">
                   <label>First Name *</label>
-                  <input
-                    type="text"
-                    name="firstName"
-                    placeholder="First name"
-                    value={form.firstName}
-                    onChange={handleChange}
-                    className={errors.firstName ? "input-error" : ""}
-                  />
+                  <input type="text" name="firstName" placeholder="First name"
+                    value={form.firstName} onChange={handleChange}
+                    className={errors.firstName ? "input-error" : ""} />
                   {errors.firstName && <span className="field-error">{errors.firstName}</span>}
                 </div>
                 <div className="form-field">
                   <label>Last Name *</label>
-                  <input
-                    type="text"
-                    name="lastName"
-                    placeholder="Last name"
-                    value={form.lastName}
-                    onChange={handleChange}
-                    className={errors.lastName ? "input-error" : ""}
-                  />
+                  <input type="text" name="lastName" placeholder="Last name"
+                    value={form.lastName} onChange={handleChange}
+                    className={errors.lastName ? "input-error" : ""} />
                   {errors.lastName && <span className="field-error">{errors.lastName}</span>}
                 </div>
               </div>
 
               <div className="form-field">
                 <label>Email Address *</label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="username@example.com"
-                  value={form.email}
-                  onChange={handleChange}
-                  className={errors.email ? "input-error" : ""}
-                />
+                <input type="email" name="email" placeholder="username@example.com"
+                  value={form.email} onChange={handleChange}
+                  className={errors.email ? "input-error" : ""} />
                 {errors.email && <span className="field-error">{errors.email}</span>}
               </div>
 
               <div className="form-field">
                 <label>Subject *</label>
-                <select
-                  name="subject"
-                  value={form.subject}
-                  onChange={handleChange}
-                  className={errors.subject ? "input-error" : ""}
-                >
+                <select name="subject" value={form.subject} onChange={handleChange}
+                  className={errors.subject ? "input-error" : ""}>
                   <option value="">Select a topic...</option>
                   <option value="courses">Option 1</option>
                   <option value="designs">Option 2</option>
@@ -184,19 +151,13 @@ function Contact() {
 
               <div className="form-field">
                 <label>Message *</label>
-                <textarea
-                  name="message"
-                  placeholder="Tell us what's on your mind..."
-                  value={form.message}
-                  onChange={handleChange}
-                  className={errors.message ? "input-error" : ""}
-                />
+                <textarea name="message" placeholder="Tell us what's on your mind..."
+                  value={form.message} onChange={handleChange}
+                  className={errors.message ? "input-error" : ""} />
                 {errors.message && <span className="field-error">{errors.message}</span>}
               </div>
 
-              <button className="submit-btn" onClick={handleSubmit}>
-                Send Message →
-              </button>
+              <button className="submit-btn" onClick={handleSubmit}>Send Message →</button>
               <span className="form-note">We typically respond within one business day.</span>
             </>
           )}
@@ -211,15 +172,14 @@ function Contact() {
             <div className="hours-list">
               {[
                 { day: "Monday – Friday", time: "10:00 AM – 6:00 PM IST" },
-                { day: "Saturday", time: "11:00 AM – 3:00 PM IST" },
-                { day: "Sunday", closed: true },
+                { day: "Saturday",        time: "11:00 AM – 3:00 PM IST" },
+                { day: "Sunday",          closed: true },
               ].map((h, i) => (
                 <div className="hours-row" key={i}>
                   <span className="hours-day">{h.day}</span>
                   {h.closed
                     ? <span className="hours-closed">Closed</span>
-                    : <span className="hours-time">{h.time}</span>
-                  }
+                    : <span className="hours-time">{h.time}</span>}
                 </div>
               ))}
             </div>
@@ -229,9 +189,9 @@ function Contact() {
             <h3>Common questions.</h3>
             <div className="faq-list">
               {[
-                { q: "Lorem Ipsum", a: "Lorem Lorem" },
+                { q: "Lorem Ipsum",      a: "Lorem Lorem" },
                 { q: "Lorem Ipsum Ipsum?", a: "Loreeeeem" },
-                { q: "Lorem! Ipsum?", a: "Ipsum" },
+                { q: "Lorem! Ipsum?",    a: "Ipsum" },
               ].map((faq, i) => (
                 <div className="faq-item" key={i}>
                   <h4>{faq.q}</h4>

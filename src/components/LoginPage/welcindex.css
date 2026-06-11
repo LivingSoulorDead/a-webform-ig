@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  min-height: 100%;
+  min-height: 100svh; /* fallback for when parent has no height */
   background-color: rgb(180, 159, 210);
   background-image: url("src/assets/360_F_406607245_daS9yMQ9g8MMZz3XWf2LVXxFy5cAdLQ7.jpg");
   background-repeat: no-repeat;

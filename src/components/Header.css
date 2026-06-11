@@ -14,7 +14,7 @@
   z-index: 100;
 }
 
-/* Logo */
+/* ── Logo ── */
 .header-logo {
   font-size: 1.5em;
   font-weight: bold;
@@ -27,12 +27,8 @@
   line-height: 1;
 }
 
-.header-logo:hover {
-  text-decoration: none;
-}
-
-/* Nav — fills remaining space, profile pinned to right */
-.header-nav {
+/* ── Desktop nav ── */
+.desktop-nav {
   margin-left: 60px;
   display: flex;
   align-items: center;
@@ -46,7 +42,6 @@
   flex-shrink: 0;
 }
 
-/* Plain nav link */
 .nav-link {
   color: rgb(118, 100, 100);
   text-decoration: none;
@@ -57,17 +52,13 @@
   flex-shrink: 0;
 }
 
-.nav-link:hover {
-  text-decoration: underline;
-}
+.nav-link:hover { text-decoration: underline; }
 
-/* Dropdown wrapper */
 .nav-dropdown {
   position: relative;
   flex-shrink: 0;
 }
 
-/* Dropdown trigger button */
 .nav-btn {
   background: transparent;
   border: none;
@@ -77,17 +68,13 @@
   font-size: 15px;
   cursor: pointer;
   padding: 0;
-  border-radius: 0;
   display: flex;
   align-items: center;
   gap: 5px;
   white-space: nowrap;
 }
 
-.nav-btn:hover {
-  background: transparent;
-  text-decoration: underline;
-}
+.nav-btn:hover { text-decoration: underline; background: transparent; }
 
 .caret {
   font-size: 11px;
@@ -95,15 +82,9 @@
   display: inline-block;
   color: rgb(120, 90, 90);
 }
+.caret.open { transform: rotate(180deg); }
 
-.caret.open {
-  transform: rotate(180deg);
-}
-
-/* Profile button extras */
-.profile-btn {
-  gap: 8px;
-}
+.profile-btn { gap: 8px; }
 
 .avatar {
   width: 28px;
@@ -118,18 +99,9 @@
   font-weight: 700;
   flex-shrink: 0;
 }
+.avatar.lg { width: 38px; height: 38px; font-size: 16px; }
 
-.avatar.lg {
-  width: 38px;
-  height: 38px;
-  font-size: 16px;
-}
-
-.profile-name {
-  display: none;
-}
-
-/* Dropdown panel */
+/* ── Dropdown panel ── */
 .dropdown-menu {
   position: absolute;
   top: calc(100% + 10px);
@@ -144,11 +116,7 @@
   animation: dropIn 0.15s ease;
 }
 
-.dropdown-right {
-  left: auto;
-  right: 0;
-  min-width: 210px;
-}
+.dropdown-right { left: auto; right: 0; min-width: 210px; }
 
 @keyframes dropIn {
   from { opacity: 0; transform: translateY(-6px); }
@@ -171,40 +139,18 @@
   transition: background 0.15s ease;
   font-family: Arial, sans-serif;
 }
+.dropdown-menu button:hover { background: #f5f0f3; color: #7c6575; }
 
-.dropdown-menu button:hover {
-  background: #f5f0f3;
-  color: #7c6575;
-}
+.logout-item { color: #c0392b !important; }
+.logout-item:hover { background: #fdf2f2 !important; }
 
-.logout-item {
-  color: #c0392b !important;
-}
-
-.logout-item:hover {
-  background: #fdf2f2 !important;
-}
-
-/* Dropdown header (profile card) */
 .dropdown-header {
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 14px 16px 10px;
 }
-
-.dh-name {
-  font-size: 14px;
-  font-weight: 600;
-  color: #3a2e34;
-}
-
-.dh-role {
-  font-size: 12px;
-  color: #9e8090;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
+.dh-name { font-size: 14px; font-weight: 600; color: #3a2e34; }
 
 .dropdown-divider {
   border: none;
@@ -212,88 +158,107 @@
   margin: 4px 0;
 }
 
-/* ── Responsive: Tablet (≤920px) ── */
+/* ── Hamburger button — hidden on desktop ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 4px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.hamburger:hover { background: rgba(118,100,100,0.1); }
+
+.ham-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: rgb(118, 100, 100);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+
+/* Animate to X when open */
+.ham-line:nth-child(1).open { transform: translateY(7px) rotate(45deg); }
+.ham-line:nth-child(2).open { opacity: 0; transform: scaleX(0); }
+.ham-line:nth-child(3).open { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile drawer ── */
+.mobile-menu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e0e3;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  z-index: 9998;
+  padding: 8px 0 12px;
+  animation: dropIn 0.2s ease;
+}
+
+.mobile-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px 12px;
+}
+
+.mobile-username {
+  font-size: 15px;
+  font-weight: 600;
+  color: #3a2e34;
+  font-family: Arial, sans-serif;
+}
+
+.mobile-item {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 12px 20px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+  color: #3a2e34;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.15s ease;
+}
+
+.mobile-item:hover { background: #f5f0f3; color: #7c6575; }
+
+/* ── Tablet (≤920px) ── */
 @media (max-width: 920px) {
-  .header {
-    padding: 0 24px;
-    gap: 0;
-  }
-
-  .header-nav {
-    margin-left: 32px;
-    gap: 28px;
-  }
+  .header { padding: 0 24px; }
+  .desktop-nav { margin-left: 32px; gap: 28px; }
 }
 
-/* ── Responsive: Small Tablet (≤720px) ── */
+/* ── Small Tablet (≤720px) ── */
 @media (max-width: 720px) {
-  .header {
-    padding: 0 20px;
-    height: 60px;
-  }
-
-  .header-nav {
-    margin-left: 20px;
-    gap: 20px;
-  }
-
-  .nav-link,
-  .nav-btn {
-    font-size: 14px;
-  }
+  .header { padding: 0 20px; height: 60px; }
+  .desktop-nav { margin-left: 20px; gap: 20px; }
+  .nav-link, .nav-btn { font-size: 14px; }
+  .mobile-menu { top: 60px; }
 }
 
-/* ── Responsive: Mobile (≤560px) ── */
+/* ── Mobile (≤560px): show hamburger, hide desktop nav ── */
 @media (max-width: 560px) {
-  .header {
-    height: auto;
-    padding: 12px 16px;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .header-logo {
-    font-size: 1.3em;
-  }
-
-  .header-nav {
-    margin-left: 0;
-    gap: 16px;
-    flex: 1 1 100%;
-    order: 2;
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  .profile-dropdown {
-    margin-left: auto;
-  }
-
-  .nav-link,
-  .nav-btn {
-    font-size: 13.5px;
-  }
-
-  /* Dropdown stays anchored correctly on mobile */
-  .dropdown-menu {
-    min-width: 160px;
-  }
-}
-
-/* ── Responsive: Extra Small (≤380px) ── */
-@media (max-width: 380px) {
-  .header {
-    padding: 10px 12px;
-    gap: 8px;
-  }
-
-  .header-nav {
-    gap: 12px;
-  }
-
-  .nav-link,
-  .nav-btn {
-    font-size: 13px;
-  }
+  .desktop-nav { display: none; }
+  .hamburger   { display: flex; }
+  .header      { height: 60px; padding: 0 16px; }
+  .mobile-menu { top: 60px; }
 }

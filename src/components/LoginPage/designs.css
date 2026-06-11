@@ -1,6 +1,5 @@
 .designs-page {
-  height: calc(100vh - 60px);
-  overflow: hidden;
+  min-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   background: #0d0d0d;
@@ -110,7 +109,7 @@
 }
 
 @media (max-width: 480px) {
-  .designs-page { padding: 16px 14px 14px; height: auto; overflow-y: auto; }
+  .designs-page { padding: 16px 14px 14px; }
   .designs-title { font-size: 22px; margin-bottom: 14px; }
   .designs-grid {
     grid-template-columns: 1fr;

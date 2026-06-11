@@ -12,7 +12,7 @@
 /* ── Hero ── */
 .about-hero {
   background: linear-gradient(135deg, #7c6575 0%, #9e8090 60%, #b89fab 100%);
-  background-image: url('src/assets/Screenshot 2025-09-09 223451.png');
+  background-image: url('src/assets/abstract-polygonal-banner-background.jpg');
   background-size: cover;
   background-position: center;
   padding: 80px 48px 72px;
@@ -45,7 +45,7 @@
 .about-hero h1 {
   font-size: 52px;
   font-weight: 700;
-  color: #ffffff;
+  color: #000000;
   letter-spacing: -1.5px;
   margin: 0 0 18px;
   line-height: 1.1;
@@ -54,7 +54,7 @@
 
 .about-hero-sub {
   font-size: 18px;
-  color: rgba(255,255,255,0.82);
+  color: rgba(0, 0, 0, 0.82);
   max-width: 1000px;
   margin: 0 auto;
   line-height: 1.65;

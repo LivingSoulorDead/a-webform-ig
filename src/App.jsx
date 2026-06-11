@@ -14,7 +14,7 @@ import Mydes from "./components/LoginPage/Mydes";
 import Myord from "./components/LoginPage/Myord";
 
 // Pages that fill the viewport and clip content (no outer scroll, no footer)
-const FIXED_PAGES = ["/", "/designs", "/courses"];
+const FIXED_PAGES = ["/"];
 
 function Layout() {
   const location = useLocation();

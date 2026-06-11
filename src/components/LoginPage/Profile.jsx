@@ -43,7 +43,7 @@ function Profile() {
     </div>
     <br/>
     <div className="profile buttons-ord">
-      <button className="profile-button" onClick={() => navigate("/myor")}>My Orders</button>
+      <button className="profile-button" onClick={() => navigate("/myord")}>My Orders</button>
     </div>
     <br/>
     <div className="profile buttons-log">

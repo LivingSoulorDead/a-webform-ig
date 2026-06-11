@@ -1,5 +1,5 @@
 .designs-page {
-  height: 100%;
+  height: calc(100vh - 60px);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -17,15 +17,15 @@
   letter-spacing: -1px;
   margin: 0 0 20px 0;
   flex-shrink: 0;
+  text-align: center;
 }
 
 .designs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: 14px;
-  flex: 1;
-  min-height: 0;
+  flex-shrink: 0;
+  /* rows will be set by JS */
 }
 
 .design-card {
@@ -106,14 +106,14 @@
   .designs-title { font-size: 26px; margin-bottom: 16px; }
   .designs-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 12px;
   }
 }
 
 @media (max-width: 480px) {
-  .designs-page { padding: 16px 14px 14px; }
+  .designs-page { padding: 16px 14px 14px; height: auto; overflow-y: auto; }
   .designs-title { font-size: 22px; margin-bottom: 14px; }
-  .designs-grid { gap: 10px; }
+  .designs-grid {
+    grid-template-columns: 1fr;
+  }
   .back-btn { padding: 9px 28px; font-size: 13px; }
 }

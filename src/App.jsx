@@ -13,26 +13,44 @@ import Profile from "./components/LoginPage/Profile";
 import Mydes from "./components/LoginPage/Mydes";
 import Myord from "./components/LoginPage/Myord";
 
-// Pages that have their own full-height fixed layout (no footer, no scroll)
-const NO_FOOTER_PATHS = ["/loginn"];
+// Pages that fill the viewport and clip content (no outer scroll, no footer)
+const FIXED_PAGES = ["/", "/designs", "/courses"];
 
 function Layout() {
   const location = useLocation();
-  const showFooter = !NO_FOOTER_PATHS.includes(location.pathname);
+  const isFixedPage = FIXED_PAGES.includes(location.pathname);
 
-  return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100vh", overflow: "hidden" }}>
-      <Header />
-      {/*
-        Scrollable wrapper: About & Contact scroll naturally here.
-        Welcome, Designs, Courses fill 100% of this flex-1 area via their own CSS.
-      */}
-      <div style={{ flex: 1, overflowY: "auto", overflowX: "hidden", display: "flex", flexDirection: "column" }}>
-        <div style={{ flex: 1 }}>
+  if (isFixedPage) {
+    // Viewport-locked layout: header + page fills remaining height exactly
+    return (
+      <div style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100vh",
+        minWidth: "320px",
+        overflow: "hidden",
+      }}>
+        <Header />
+        <div style={{ flex: 1, overflow: "hidden", display: "flex", flexDirection: "column" }}>
           <Outlet />
         </div>
-        {showFooter && <Footer />}
       </div>
+    );
+  }
+
+  // Scrollable layout: About, Contact, Profile, Mydes, Myord — natural page scroll with footer
+  return (
+    <div style={{
+      display: "flex",
+      flexDirection: "column",
+      minHeight: "100vh",
+      minWidth: "320px",
+    }}>
+      <Header />
+      <div style={{ flex: 1 }}>
+        <Outlet />
+      </div>
+      <Footer />
     </div>
   );
 }

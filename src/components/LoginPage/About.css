@@ -380,6 +380,27 @@
   background: linear-gradient(135deg, #7c6575 0%, #9e8090 100%);
 }
 
+.projs{
+  height: 100px;
+}
+
+.projs button{
+  margin-top: 30px;
+  width:160px;
+  border-radius: 20px;
+  height: 40px;
+  box-shadow: none;
+  text-shadow: none;
+  border: none;
+  color: white;
+}
+
+.projs button:hover{
+  background: linear-gradient(90deg, black, #7c6575 );
+  transform: translateY(-2px);
+  cursor:pointer;
+}
+
 .about-cta h2 {
   font-size: 32px;
   font-weight: 600;

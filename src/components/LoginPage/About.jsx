@@ -82,6 +82,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       </section>
 
       {/* CTA */}
+      <section className="projs">
+        <button>Check Out Our Projects</button>
+        
+      </section>
       <section className="about-cta">
         <h2>Want to be part of the story?</h2>
         <p>Explore our courses, check out our work, or just say hello.</p>

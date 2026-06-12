@@ -241,13 +241,11 @@
 
 .mobile-item:hover { background: #f5f0f3; color: #7c6575; }
 
-/* ── Tablet (≤920px) ── */
 @media (max-width: 920px) {
   .header { padding: 0 24px; }
   .desktop-nav { margin-left: 32px; gap: 28px; }
 }
 
-/* ── Small Tablet (≤720px) ── */
 @media (max-width: 720px) {
   .header { padding: 0 20px; height: 60px; }
   .desktop-nav { margin-left: 20px; gap: 20px; }
@@ -255,8 +253,7 @@
   .mobile-menu { top: 60px; }
 }
 
-/* ── Mobile (≤560px): show hamburger, hide desktop nav ── */
-@media (max-width: 560px) {
+@media (max-width: 798px) {
   .desktop-nav { display: none; }
   .hamburger   { display: flex; }
   .header      { height: 60px; padding: 0 16px; }
